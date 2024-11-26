@@ -1,0 +1,75 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                  Spider_01.jpg  label:                     spider
+ 2 key:                  Beagle_02.jpg  label:                     beagle
+ 3 key:                  Beagle_01.jpg  label:                     beagle
+ 4 key:                    Door_01.jpg  label:                       door
+
+     MATCH:
+
+                 Spider_01.jpg: 
+Real:                     spider   Classifier: barn spider, araneus cavaticus
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:                         beagle
+
+ NOT A MATCH:
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               blenheim spaniel
+
+                   Door_01.jpg: 
+Real:                       door   Classifier:        wardrobe, closet, press
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                 Spider_01.jpg: 
+Real:                     spider   Classifier: barn spider, araneus cavaticus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 Beagle_01.jpg: 
+Real:                     beagle   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                 Beagle_02.jpg: 
+Real:                     beagle   Classifier:               blenheim spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Door_01.jpg: 
+Real:                       door   Classifier:        wardrobe, closet, press  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+  
+Pct_match           : 50.0 %
+Pct_correct_dogs    : 100.0 %
+Pct_correct_breed   : 50.0 %
+Pct_correct_notdogs : 100.0 %
+
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:               blenheim spaniel
+
+** Total Elapsed Runtime: 0:0:2
